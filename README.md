@@ -1,8 +1,9 @@
 # ParkingGent
 Ios application - live parking feed from Ghent
 
-![Loading](https://i.imgur.com/Yl5EKCO.png | width=100)
-![List](https://i.imgur.com/Dyo3Jeo.png | width=100)
-![Detail](https://i.imgur.com/55qtHA6.png | width=100)
-![Naviagtion](https://i.imgur.com/tHKL0wR.png | width=100)
+<img width="200" alt="Loading" src="https://i.imgur.com/Yl5EKCO.png">
+<img width="200" alt="List" src="https://i.imgur.com/Dyo3Jeo.png">
+<img width="200" alt="Detail" src="https://i.imgur.com/55qtHA6.png">
+<img width="200" alt="Navigation" src="https://i.imgur.com/tHKL0wR.png">
+
 

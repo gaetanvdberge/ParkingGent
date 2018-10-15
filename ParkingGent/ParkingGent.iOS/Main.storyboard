@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="202">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="201">
+            <objects>
+                <tableViewController id="202" sceneMemberID="viewController" customClass="ParkingView" storyboardIdentifier="ParkingView" useStoryboardIdentifierAsRestorationIdentifier="YES" hasRefreshControl="0">
+                    <tableView key="view" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" id="203" separatorStyle="default" sectionIndexMinimumDisplayRowCount="3" clipsSubviews="YES" autoresizesSubviews="NO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="206" customClass="ParkingTableCell" restorationIdentifier="ParkingCell" reuseIdentifier="ParkingCell" rowHeight="70">
+                                <rect key="frame" x="0.0" y="28" width="414" height="70"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="206" id="207">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="69.5"/>
+                                    <autoresizingMask key="autoresizingMask" heightSizable="YES" widthSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2399" translatesAutoresizingMaskIntoConstraints="NO" text="Sint-Michiels">
+                                            <rect key="frame" x="20" y="22.5" width="117.5" height="25"/>
+                                            <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="19"/>
+                                            <color key="textColor" colorSpace="calibratedRGB" red="0.066666666666666666" green="0.54509803921568623" blue="0.85882352941176465" alpha="1"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2400" translatesAutoresizingMaskIntoConstraints="NO" text="100/450">
+                                            <rect key="frame" x="325" y="22.5" width="69" height="25"/>
+                                            <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="19"/>
+                                            <color key="textColor" colorSpace="calibratedRGB" red="0.066666666666666666" green="0.54509803921568623" blue="0.85882352941176465" alpha="1"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint id="5355" firstItem="2399" firstAttribute="leading" secondItem="207" secondAttribute="leading" constant="20"/>
+                                        <constraint id="5356" firstItem="2399" firstAttribute="centerY" secondItem="207" secondAttribute="centerY"/>
+                                        <constraint id="5357" firstItem="207" firstAttribute="trailing" secondItem="2400" secondAttribute="trailing" constant="20"/>
+                                        <constraint id="5358" firstItem="2400" firstAttribute="centerY" secondItem="207" secondAttribute="centerY"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="lblParking" destination="2399" id="name-outlet-2399"/>
+                                    <outlet property="lblPlaatsen" destination="2400" id="name-outlet-2400"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="202" id="204"/>
+                            <outlet property="delegate" destination="202" id="205"/>
+                        </connections>
+                        <inset key="separatorInset" minX="0.0" minY="0" maxX="0" maxY="0"/>
+                    </tableView>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="208" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="126" y="-190"/>
+        </scene>
+        <scene sceneID="5574">
+            <objects>
+                <viewController id="5575" sceneMemberID="viewController" customClass="DetailView" storyboardIdentifier="DetailView" useStoryboardIdentifierAsRestorationIdentifier="YES">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5572"/>
+                        <viewControllerLayoutGuide type="bottom" id="5573"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5576">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="6213" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="244.5"/>
+                                <constraints/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="343" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6432" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="156" y="592" width="103.5" height="69.5"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="62"/>
+                                <color key="textColor" colorSpace="calibratedRGB" red="0.050980392156862744" green="0.42745098039215684" blue="0.6705882352941176" alpha="1"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Available places" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6434" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="107" y="661" width="200.5" height="38.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="28"/>
+                                <color key="textColor" colorSpace="calibratedRGB" red="0.050980392156862744" green="0.42745098039215684" blue="0.6705882352941176" alpha="1"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" id="8107" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="0.0" y="253" width="414" height="106"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.066666666666666666" green="0.54509803921568623" blue="0.85882352941176465" alpha="1"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parking Sint-Michiels" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8126" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                        <rect key="frame" x="14" y="22" width="318.5" height="20"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sint-Pietersplein 65       9000 Gent" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8168" translatesAutoresizingMaskIntoConstraints="NO" numberOfLines="4" fixedFrame="YES">
+                                        <rect key="frame" x="14" y="38" width="242" height="54"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7590" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                        <rect key="frame" x="288.5" y="39" width="105.5" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" colorSpace="calibratedRGB" red="0.050980392156862744" green="0.42745098039215684" blue="0.6705882352941176" alpha="1"/>
+                                        <state key="normal" title="Navigate">
+                                            <color key="titleColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute keyPath="layer.cornerRadius" type="number">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="9755" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="0.0" y="243" width="414" height="10"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.050980392156862744" green="0.42745098039215684" blue="0.6705882352941176" alpha="1"/>
+                            </view>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="10209">
+                                <rect key="frame" x="54" y="708" width="306" height="14"/>
+                                <constraints>
+                                    <constraint id="11298" firstItem="10209" firstAttribute="height" constant="14"/>
+                                </constraints>
+                                <color key="progressTintColor" colorSpace="calibratedRGB" red="0.054901960784313725" green="0.43137254901960786" blue="0.67450980392156867" alpha="1"/>
+                                <color key="trackTintColor" colorSpace="calibratedRGB" red="0.6588235294117647" green="0.81568627450980391" blue="0.88627450980392153" alpha="1"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute keyPath="layer.cornerRadius" type="number">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="987" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="16128" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="20" y="708" width="34" height="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" colorSpace="calibratedRGB" red="0.050980392156862744" green="0.42745098039215684" blue="0.6705882352941176" alpha="1"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="16383" firstItem="16128" firstAttribute="width" constant="34"/>
+                                </constraints>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="786" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="16129" translatesAutoresizingMaskIntoConstraints="NO" textAlignment="right" misplaced="YES">
+                                <rect key="frame" x="360" y="708" width="34" height="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" colorSpace="calibratedRGB" red="0.050980392156862744" green="0.42745098039215684" blue="0.6705882352941176" alpha="1"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="16382" firstItem="16129" firstAttribute="width" constant="34"/>
+                                </constraints>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint id="6485" firstItem="6432" firstAttribute="centerX" secondItem="5576" secondAttribute="centerX" constant="0.5"/>
+                            <constraint id="6487" firstItem="5573" firstAttribute="top" secondItem="6434" secondAttribute="bottom" constant="36.5"/>
+                            <constraint id="6488" firstItem="6434" firstAttribute="centerX" secondItem="5576" secondAttribute="centerX"/>
+                            <constraint id="6713" firstItem="6432" firstAttribute="bottom" secondItem="6434" secondAttribute="top" constant="0.5"/>
+                            <constraint id="11318" firstItem="10209" firstAttribute="centerX" secondItem="5576" secondAttribute="centerX"/>
+                            <constraint id="15628" firstItem="10209" firstAttribute="top" secondItem="6434" secondAttribute="bottom" constant="8.5"/>
+                            <constraint id="15884" firstItem="5576" firstAttribute="trailingMargin" secondItem="10209" secondAttribute="trailing" constant="34"/>
+                            <constraint id="15885" firstItem="10209" firstAttribute="leading" secondItem="5576" secondAttribute="leadingMargin" constant="34"/>
+                            <constraint id="16378" firstItem="16129" firstAttribute="leading" secondItem="10209" secondAttribute="trailing"/>
+                            <constraint id="16379" firstItem="16128" firstAttribute="trailing" secondItem="10209" secondAttribute="leading"/>
+                            <constraint id="16380" firstItem="5576" firstAttribute="bottom" secondItem="16128" secondAttribute="bottom" constant="14"/>
+                            <constraint id="16381" firstItem="5576" firstAttribute="bottom" secondItem="16129" secondAttribute="bottom" constant="14"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mpMap" destination="6213" id="name-outlet-6213"/>
+                        <outlet property="lblFreePlaces" destination="6432" id="name-outlet-6432"/>
+                        <outlet property="lblParkingName" destination="8126" id="name-outlet-8126"/>
+                        <outlet property="lblAddress" destination="8168" id="name-outlet-8168"/>
+                        <outlet property="btnNavigate" destination="7590" id="name-outlet-7590"/>
+                        <outlet property="pbBaar" destination="10209" id="name-outlet-10209"/>
+                        <outlet property="lblPlacesTaken" destination="16128" id="name-outlet-16128"/>
+                        <outlet property="lblPlacesTotal" destination="16129" id="name-outlet-16129"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5577" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="612" y="-188"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="LogoGent.png" width="3319" height="1206"/>
+    </resources>
+</document>
